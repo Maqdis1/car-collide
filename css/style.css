@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  }
+.path {
+  width: 800px;
+  height: 80px;
+  position: relative;
+  }
+.box,
+.box2{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  right: 500px;
+  transform: translateY(50%);
+}
+.box {
+  background-color: #f9fd00;
+  left: 0%;
+    animation: ani1 ease-in-out infinite 5s;
+}
+.box2 {
+  background-color: #f00;
+  right: 0%;
+  animation: ani2 ease-in-out infinite 5s;
+}
+.wall{
+  position: absolute;
+  top: -100px;
+  right: 80px;
+  background-color: black;
+  width: 90px;
+  height: 700px;
+  z-index: +1;
+  animation: ani3 ease-in-out infinite 5s;
+  }
+@keyframes ani1 {
+  0% {
+    left: 88%;
+  }
+  50% {
+    left: 120%;
+  }
+  100% {
+    left: 88%;
+  }
+}
+@keyframes ani2 {
+  0% {
+    right: 88%;
+  }
+  50% {
+    right: 120%;
+  }
+  100% {
+    right: 88%;
+  }
+}
+@keyframes ani3 {
+  0% {
+    border-top-left-radius: 70%;
+  }
+  20% {
+    border-top-right-radius: 70%;
+  }
+  40% {
+    border-bottom-left-radius: 70%;
+  }
+  60% {
+    border-bottom-right-radius: 70%;
+  }
+  80% {
+    border-bottom-right-radius: 70%;
+  }
+  100% {
+    border-bottom-right-radius: 70%;
+  }
+}
